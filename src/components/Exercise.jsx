@@ -1,4 +1,5 @@
 import React from 'react';
+import './Exercise.css';
 
 class Exercise extends React.Component {
   constructor(props) {
@@ -11,7 +12,11 @@ class Exercise extends React.Component {
   // value={this.state.value} onChange={this.handleChange}
   render() {
     return (
-      <form >
+      <form id="form">
+        <label>
+          Date:
+          <input type="text" />
+        </label>
         <label>
           Exercise:
           <input type="text" />
