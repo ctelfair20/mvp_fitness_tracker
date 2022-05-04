@@ -2,6 +2,6 @@
   display: flex;
   flex-direction: column;
   border: 2px solid forestgreen;
-  width: auto%;
+  width: auto;
   padding: 10px;
 }

@@ -13,19 +13,19 @@ class Exercise extends React.Component {
   render() {
     return (
       <form id="form">
-        <label>
+        <label className="form-field">
           Date:
           <input type="text" />
         </label>
-        <label>
+        <label className="form-field">
           Exercise:
           <input type="text" />
         </label>
-        <label>
+        <label className="form-field">
           Sets:
           <input type="text" />
         </label>
-        <label>
+        <label className="form-field">
           Repititions:
           <input type="text" />
         </label>
