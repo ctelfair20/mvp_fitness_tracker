@@ -1,5 +1,6 @@
 import React from 'react';
 import './Exercise.css';
+import axios from 'axios';
 
 class Exercise extends React.Component {
   constructor(props) {
@@ -43,7 +44,24 @@ class Exercise extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    console.log('was sent')
+    console.log('was sent');
+    axios({
+      url: '/workout',
+      method: 'post',
+      data: {
+        date: this.state.date,
+        exercise: this.state.exercise,
+        sets: this.state.sets,
+        repititions: this.state.repititions
+      },
+      header: { 'content-type': 'application/json' }
+    })
+      .then((data) => {
+        console.log('doc saved!')
+      })
+      .catch((err) => {
+        console.log('ERROR!!!', err)
+      })
   }
 
   render() {
