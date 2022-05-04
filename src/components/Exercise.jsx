@@ -5,29 +5,65 @@ class Exercise extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-
+      date: '',
+      exercise: '',
+      sets: '',
+      repititions: ''
     }
+    this.handleDateChange = this.handleDateChange.bind(this);
+    this.handleExerciseChange = this.handleExerciseChange.bind(this);
+    this.handleSetsChange = this.handleSetsChange.bind(this);
+    this.handleRepititionsChange = this.handleRepititionsChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
-  // onSubmit={this.handleSubmit}
-  // value={this.state.value} onChange={this.handleChange}
+
+  handleDateChange(e) {
+    this.setState({
+      date: e.target.value
+    })
+  }
+
+  handleExerciseChange(e) {
+    this.setState({
+      exercise: e.target.value
+    })
+  }
+
+  handleSetsChange(e) {
+    this.setState({
+      sets: e.target.value
+    })
+  }
+
+  handleRepititionsChange(e) {
+    this.setState({
+      repititions: e.target.value
+    })
+  }
+
+  handleSubmit(e) {
+    e.preventDefault();
+    console.log('was sent')
+  }
+
   render() {
     return (
-      <form id="form">
+      <form id="form" onSubmit={this.handleSubmit}>
         <label className="form-field">
           Date:
-          <input type="text" />
+          <input type="text" value={this.state.date} onChange={this.handleDateChange} />
         </label>
         <label className="form-field">
           Exercise:
-          <input type="text" />
+          <input type="text" value={this.state.exercise} onChange={this.handleExerciseChange} />
         </label>
         <label className="form-field">
           Sets:
-          <input type="text" />
+          <input type="text" value={this.state.sets} onChange={this.handleSetsChange} />
         </label>
         <label className="form-field">
           Repititions:
-          <input type="text" />
+          <input type="text" value={this.state.repititions} onChange={this.handleRepititionsChange} />
         </label>
         <input type="submit" value="Submit" />
       </form>
