@@ -12,9 +12,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/workout', (req, res) => {
-  Workout.find()
+  console.log('req', req.query)
+  Workout.find(req.query)
     .then((data) => {
+      console.log(data);
       res.json(data);
+    }).catch(err => {
+      res.send(err);
     })
 })
 ///////THIS WORKS IN POSTMAN////////////

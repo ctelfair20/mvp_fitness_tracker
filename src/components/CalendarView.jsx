@@ -8,10 +8,13 @@ const CalendarView = function ({ setter }) {
   const [date, setDate] = useState(new Date());
 
   const handleChange = (e) => {
-    setDate(e);
+    setDate(e)
     axios({
       url: '/workout',
-      method: 'get'
+      method: 'get',
+      params: {
+        date: e
+      }
     })
       .then((data) => {
         setter(data.data)
