@@ -13,9 +13,18 @@ const workoutSchema = new mongoose.Schema({
   exercise: String,
   sets: Number,
   repititions: Number,
-  date: String
+  date: Date
 });
 
 const Workout = mongoose.model('Workout', workoutSchema);
+// const workoutDoc = new Workout({
+//   date: '05/01/2022',
+//   exercise: 'sit-ups',
+//   sets: 2,
+//   repititions: 10
+// });
+
+// Workout.find()
+//   .then((data) => { console.log(data) })
 
 module.exports = Workout

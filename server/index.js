@@ -11,6 +11,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
+app.get('/workout', (req, res) => {
+  Workout.find()
+    .then((data) => {
+      res.json(data);
+    })
+})
 ///////THIS WORKS IN POSTMAN////////////
 // app.post("/workout", (req, res) => {
 //   console.log('req.body', req.body)
