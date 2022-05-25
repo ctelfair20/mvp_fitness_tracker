@@ -10,7 +10,7 @@ const CalendarView = function ({ setter }) {
   const handleChange = (e) => {
     setDate(e)
     axios({
-      url: '/workout',
+      url: 'http://localhost:4000/workout',
       method: 'get',
       params: {
         date: e
