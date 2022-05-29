@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import { TextInput, NumberInput, Button, Group, Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
@@ -17,14 +18,30 @@ function MantineE() {
     },
   });
 
-  // function handleSubmit(values) {
-  //   console.log(values);
-  //   console.log('form val :', typeof form.values.date)
-  // }
+  function handleSubmit(values) {
+    console.log(values);
+    axios({
+      url: 'http://localhost:4000/workout',
+      method: 'post',
+      data: {
+        date: form.values.date,
+        exercise: form.values.exercise,
+        sets: form.values.sets,
+        repititions: form.values.repititions
+      },
+      header: { 'content-type': 'application/json' }
+    })
+      .then((data) => {
+        console.log('doc saved!')
+      })
+      .catch((err) => {
+        console.log('ERROR!!!', err)
+      })
+  }
 
   return (
     <Box sx={{ maxWidth: 300 }}>
-      <form onSubmit={form.onSubmit((values) => console.log(values))}>
+      <form onSubmit={form.onSubmit(handleSubmit)}>
         <TextInput
           required
           label="Date"
