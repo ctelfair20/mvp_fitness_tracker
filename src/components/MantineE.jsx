@@ -10,15 +10,16 @@ function MantineE() {
       sets: '',
       repititions: ''
     },
-
     validate: {
-      // date: (value) => (value.length < 2 ? 'name-error' : null),
-      // exercise: (value) => (value < 18 ? 'age-error' : null),
+      date: (value) => (
+        /(0[1-9]|1[012])[- \/.](0[1-9]|[12][0-9]|3[01])[- \/.](19|20)\d\d/.test(value) ? null : 'date-error'
+      ),
     },
   })
 
   function handleSubmit(values) {
     console.log(values);
+    console.log('form val :', typeof form.values.date)
   }
 
   return (
