@@ -10,14 +10,18 @@ function App() {
 
   return (
     <div id="app-container">
-      <div id="left-column">
-        <h1>What did you workout today?</h1>
-        {/* <Exercise /> */}
-        <MantineE />
-        <History workouts={history} />
+      <div id='top-half'>
+        <div id="left-column">
+          <h1>What did you workout today?</h1>
+          {/* <Exercise /> */}
+          <MantineE />
+        </div>
+        <div id="right-column">
+          <CalendarView setter={setHistory} />
+        </div>
       </div>
-      <div id="right-column">
-        <CalendarView setter={setHistory} />
+      <div id='bottom-half'>
+        <History workouts={history} />
       </div>
     </div>
   );
