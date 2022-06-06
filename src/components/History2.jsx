@@ -1,4 +1,4 @@
-import { Table, Box } from '@mantine/core';
+import { Table, Box, Button, Group } from '@mantine/core';
 
 function History2({ workouts }) {
   console.log(workouts)
@@ -7,6 +7,9 @@ function History2({ workouts }) {
       <td>{history.exercise}</td>
       <td>{history.sets}</td>
       <td>{history.repititions}</td>
+      <Group position="right" mt="md">
+        <Button>Edit!</Button>
+      </Group>
     </tr>
   ));
 
