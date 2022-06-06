@@ -13,7 +13,7 @@ function App() {
     <div id="app-container">
       <div id='top-half'>
         <div id="left-column">
-          <h1>What did you workout today?</h1>
+          <h2>What did you workout today?</h2>
           {/* <Exercise /> */}
           <MantineE />
         </div>
