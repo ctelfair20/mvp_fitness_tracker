@@ -27,7 +27,7 @@ function History2({ workouts }) {
     return (
       <Box
         sx={(theme) => ({
-          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[2],
           textAlign: 'center',
           padding: theme.spacing.xl,
           borderRadius: theme.radius.md,

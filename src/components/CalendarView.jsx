@@ -27,7 +27,7 @@ const CalendarView = function ({ setter }) {
 
   return (
     <div id="calendar-container">
-      <h2>Search Your Fitness History!</h2>
+      <h3>Search Your Fitness History!</h3>
       <Calendar onChange={handleChange} value={date} />
       <span className='bold'>Selected Date:</span>{' '}
       {date.toDateString()}

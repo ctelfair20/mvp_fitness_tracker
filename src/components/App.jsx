@@ -11,9 +11,10 @@ function App() {
 
   return (
     <div id="app-container">
+      <h1 id="title">Stay fit with FitTrack!</h1>
       <div id='top-half'>
         <div id="left-column">
-          <h2>What did you workout today?</h2>
+          <h3>What did you workout today?</h3>
           {/* <Exercise /> */}
           <MantineE />
         </div>

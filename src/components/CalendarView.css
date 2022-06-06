@@ -14,7 +14,8 @@
   width: 650px;
   max-width: 100%;
   background: white;
-  border: 1px solid #a0a096;
+  border: 1px solid #cac9c9;
+  border-radius: 5px;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.125em;
 }
@@ -46,6 +47,7 @@
   margin: 0;
   border: 0;
   outline: none;
+  border-radius: 5px;
 }
 
 .react-calendar button:enabled:hover {
@@ -92,7 +94,7 @@
 }
 
 .react-calendar__month-view__days__day--weekend {
-  color: #d10000;
+  color: #0d00fc;
 }
 
 .react-calendar__month-view__days__day--neighboringMonth {
