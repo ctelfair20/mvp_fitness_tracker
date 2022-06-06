@@ -1,4 +1,4 @@
-import { Table } from '@mantine/core';
+import { Table, Box } from '@mantine/core';
 
 function History2({ workouts }) {
   console.log(workouts)
@@ -24,9 +24,24 @@ function History2({ workouts }) {
       </Table>
     );
   } else {
-    <div>
-      No workouts recorded. Was this a rest day?
-    </div>
+    return (
+      <Box
+        sx={(theme) => ({
+          backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[6] : theme.colors.gray[0],
+          textAlign: 'center',
+          padding: theme.spacing.xl,
+          borderRadius: theme.radius.md,
+          cursor: 'pointer',
+
+          '&:hover': {
+            backgroundColor:
+              theme.colorScheme === 'dark' ? theme.colors.dark[5] : theme.colors.gray[1],
+          },
+        })}
+      >
+        No workouts recorded. Was this a rest day?
+      </Box>
+    )
   }
 }
 
