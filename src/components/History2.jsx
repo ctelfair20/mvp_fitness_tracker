@@ -15,7 +15,7 @@ function History2({ workouts }) {
 
   if (workouts.length !== 0) {
     return (
-      <Table>
+      <Table striped highlightOnHover>
         <thead>
           <tr>
             <th>Exercise</th>
