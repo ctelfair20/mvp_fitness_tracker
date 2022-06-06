@@ -2,7 +2,8 @@ import '../components/App.css';
 import { React, useState } from 'react';
 // import Exercise from './Exercise.jsx';
 import MantineE from './MantineE.jsx';
-import History from './History.jsx';
+// import History from './History.jsx';
+import History2 from './History2.jsx';
 import CalendarView from './CalendarView.jsx';
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
         </div>
       </div>
       <div id='bottom-half'>
-        <History workouts={history} />
+        {/* <History workouts={history} /> */}
+        <History2 workouts={history} />
       </div>
     </div>
   );

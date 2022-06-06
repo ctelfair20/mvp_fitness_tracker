@@ -34,6 +34,7 @@ function History({ workouts }) {
   return (
     <>
       {workouts.length > 0 && historyMapper(workouts)}
+      HIIIIIIII
     </>
   );
 }
