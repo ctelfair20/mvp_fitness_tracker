@@ -10,6 +10,8 @@ function History2({ workouts }) {
       <td>{history.exercise}</td>
       <td>{history.sets}</td>
       <td>{history.repititions}</td>
+      {/* the value of this textarea needs to be stored in the database when enter is pressed or
+      when the user clickes away from it (when the focus changes?)  */}
       <td>
         <Textarea
           placeholder="How do you feel?"
