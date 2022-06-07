@@ -1,4 +1,4 @@
-import { Table, Box, Button, Group, TextInput } from '@mantine/core';
+import { Table, Box, Button, Group, Textarea } from '@mantine/core';
 
 function History2({ workouts }) {
 
@@ -11,7 +11,11 @@ function History2({ workouts }) {
       <td>{history.sets}</td>
       <td>{history.repititions}</td>
       <td>
-        <TextInput></TextInput>
+        <Textarea
+          placeholder="How do you feel?"
+          autosize
+          minRows={1}
+        />
       </td>
       <td>
         <Group position="center" mt="sx">
@@ -30,7 +34,7 @@ function History2({ workouts }) {
             <th>Set Number</th>
             <th>Repitition Number</th>
             <th>Notes</th>
-            <th>Mistake?</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
