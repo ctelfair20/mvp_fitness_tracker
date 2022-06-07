@@ -1,15 +1,23 @@
-import { Table, Box, Button, Group } from '@mantine/core';
+import { Table, Box, Button, Group, TextInput } from '@mantine/core';
 
 function History2({ workouts }) {
-  console.log(workouts)
+
+  const handleClick = function () {
+    console.log('edit was clicked!')
+  }
   const rows = workouts.map((history) => (
     <tr key={history._id}>
       <td>{history.exercise}</td>
       <td>{history.sets}</td>
       <td>{history.repititions}</td>
-      <Group position="right" mt="md">
-        <Button>Edit!</Button>
-      </Group>
+      <td>
+        <TextInput></TextInput>
+      </td>
+      <td>
+        <Group position="center" mt="sx">
+          <Button onClick={handleClick}>Edit!</Button>
+        </Group>
+      </td>
     </tr>
   ));
 
@@ -21,6 +29,8 @@ function History2({ workouts }) {
             <th>Exercise</th>
             <th>Set Number</th>
             <th>Repitition Number</th>
+            <th>Notes</th>
+            <th>Mistake?</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
