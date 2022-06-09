@@ -1,9 +1,26 @@
 import { Table, Box, Button, Group, Textarea } from '@mantine/core';
 
 function History2({ workouts }) {
-
-  const handleClick = function () {
+  // this function needs to be fleshed out
+  const handleEditClick = function () {
     console.log('edit was clicked!')
+  }
+
+  const sortBySet = function (history) {
+    // input array of objects
+    // output array of objects in proper order
+    // create a result array to return
+    // create a variable called lowest; set equal to first set value
+    // create a variable called index; set equal to 0
+    // iterate over array starting with second obj
+    // check set value of each obj against lowest
+    // see if set value is lower than lowest
+    // set lowest to be set value
+    // set index to be i
+    // else, don't do anything
+    // end loop
+    // push obj at index to result
+    // return result
   }
   const rows = workouts.map((history) => (
     <tr key={history._id}>
@@ -21,7 +38,7 @@ function History2({ workouts }) {
       </td>
       <td>
         <Group position="center" mt="sx">
-          <Button onClick={handleClick}>Edit!</Button>
+          <Button onClick={handleEditClick}>Edit!</Button>
         </Group>
       </td>
     </tr>
@@ -35,6 +52,7 @@ function History2({ workouts }) {
             <th>Exercise</th>
             <th>Set Number</th>
             <th>Repitition Number</th>
+            {/* notes need to be added to the databse schema */}
             <th>Notes</th>
             <th></th>
           </tr>
