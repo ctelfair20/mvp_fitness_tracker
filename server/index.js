@@ -1,4 +1,4 @@
-// const path = require('path');
+const path = require('path');
 const express = require('express');
 const Workout = require('../database/index');
 
@@ -8,6 +8,8 @@ const port = 4000;
 // const publicPath = path.join(__dirname, '..', 'public');
 app.use(cors());
 app.use(express.json());
+app.use(express.static("build"));
+app.use(express.static("public"));
 
 app.get('/', (req, res) => {
   res.send('Hello World!')

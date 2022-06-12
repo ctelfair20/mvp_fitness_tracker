@@ -18,7 +18,7 @@ function History2({ workouts }) {
     // set lowest to be set value
     // set index to be i
     // else, don't do anything
-    // end loop
+    // end loop t
     // push obj at index to result
     // return result
   }
