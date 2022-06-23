@@ -3,7 +3,7 @@ import axios from 'axios';
 import { TextInput, NumberInput, Button, Group, Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
-function MantineE() {
+function Exercise() {
   const form = useForm({
     initialValues: {
       date: '',
@@ -72,4 +72,4 @@ function MantineE() {
   )
 }
 
-export default MantineE;
+export default Exercise;

@@ -1,6 +1,6 @@
 import { Table, Box, Button, Group, Textarea } from '@mantine/core';
 
-function History2({ workouts }) {
+function History({ workouts }) {
   // this function needs to be fleshed out
   const handleEditClick = function () {
     console.log('edit was clicked!')
@@ -76,4 +76,4 @@ function History2({ workouts }) {
   }
 }
 
-export default History2;
+export default History;
