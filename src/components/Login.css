@@ -1,0 +1,15 @@
+.login-container {
+  padding-top: 150px;
+}
+
+h1 {
+  margin: 0 auto;
+}
+
+.login-outer-box {
+  background: rgb(197, 197, 197);
+  border-radius: 5%;
+  margin: 0 auto;
+  padding: 50px;
+  box-shadow: 5px 5px #1e2129;
+}
