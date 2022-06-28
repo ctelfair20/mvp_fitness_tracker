@@ -1,12 +1,13 @@
 .nav-bar {
-  /* background: rgb(40, 112, 255); */
   background: #1e2129;
-  position: sticky;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   height: 60px;
-  width: auto;
+  width: 100%;
   border-bottom: 4px rgb(148, 148, 148) solid;
 }
 

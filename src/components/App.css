@@ -1,7 +1,10 @@
-#app-container {}
+#app-container {
+  padding-top: 75px;
+}
 
 #title {
   text-align: center;
+  text-decoration: wavy;
 }
 
 #top-half {
