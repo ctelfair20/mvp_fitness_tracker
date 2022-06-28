@@ -1,10 +1,11 @@
-import '../components/App.css';
 import { React, useState } from 'react';
 
 import NavBar from './NavBar.jsx';
 import Exercise from './Exercise.jsx';
 import History from './History.jsx';
 import CalendarView from './CalendarView.jsx';
+
+import '../components/App.css';
 
 function App() {
   const [history, setHistory] = useState([]);
