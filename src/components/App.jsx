@@ -5,7 +5,6 @@ import NavBar from './NavBar.jsx';
 import Exercise from './Exercise.jsx';
 import History from './History.jsx';
 import CalendarView from './CalendarView.jsx';
-import Login from './Login.jsx';
 
 function App() {
   const [history, setHistory] = useState([]);
@@ -14,7 +13,6 @@ function App() {
     <div id="app-container">
       <NavBar />
       <h1 id="title">Stay fit with FitTrack!</h1>
-      <Login />
       <div id='top-half'>
         <div id="left-column">
           <h3>What did you workout today?</h3>
