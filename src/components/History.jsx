@@ -25,8 +25,8 @@ function History({ workouts }) {
         />
       </td>
       <td>
-        <Group position="center" mt="sx">
-          <Button onClick={handleEditClick}>Edit!</Button>
+        <Group position="left" mt="sx">
+          <Button onClick={handleEditClick}>Delete!</Button>
         </Group>
       </td>
     </tr>
@@ -42,7 +42,7 @@ function History({ workouts }) {
             <th>Repitition Number</th>
             {/* notes need to be added to the databse schema */}
             <th>Notes</th>
-            <th></th>
+            <th>Made a mistake?</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
