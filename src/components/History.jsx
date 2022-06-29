@@ -7,21 +7,9 @@ function History({ workouts }) {
   }
 
   const sortBySet = function (history) {
-    // input array of objects
-    // output array of objects in proper order
-    // create a result array to return
-    // create a variable called lowest; set equal to first set value
-    // create a variable called index; set equal to 0
-    // iterate over array starting with second obj
-    // check set value of each obj against lowest
-    // see if set value is lower than lowest
-    // set lowest to be set value
-    // set index to be i
-    // else, don't do anything
-    // end loop t
-    // push obj at index to result
-    // return result
+    //
   }
+
   const rows = workouts.map((history) => (
     <tr key={history._id}>
       <td>{history.exercise}</td>
@@ -46,7 +34,7 @@ function History({ workouts }) {
 
   if (workouts.length !== 0) {
     return (
-      <Table striped highlightOnHover>
+      <Table className="history-table" striped highlightOnHover>
         <thead>
           <tr>
             <th>Exercise</th>
