@@ -6,10 +6,6 @@ function History({ workouts }) {
     console.log('edit was clicked!')
   }
 
-  const sortBySet = function (history) {
-    //
-  }
-
   const rows = workouts.map((history) => (
     <tr key={history._id}>
       <td>{history.exercise}</td>
@@ -38,8 +34,8 @@ function History({ workouts }) {
         <thead>
           <tr>
             <th>Exercise</th>
-            <th>Set Number</th>
-            <th>Repitition Number</th>
+            <th>Set #</th>
+            <th>Repitition #</th>
             {/* notes need to be added to the databse schema */}
             <th>Notes</th>
             <th>Made a mistake?</th>
