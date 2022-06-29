@@ -21,7 +21,13 @@
 #search-and-sort {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
+}
+
+/* Styles for SearchBox */
+.sort-box-container {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (prefers-reduced-motion: no-preference) {
