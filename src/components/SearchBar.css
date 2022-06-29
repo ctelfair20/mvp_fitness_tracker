@@ -1,0 +1,7 @@
+.search-box-container {
+  display: flex;
+}
+
+.search-button {
+  margin-top: 27px;
+}

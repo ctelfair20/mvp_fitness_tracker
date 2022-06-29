@@ -5,7 +5,7 @@ import Exercise from './Exercise.jsx';
 import History from './History.jsx';
 import CalendarView from './CalendarView.jsx';
 import SortBox from './SortBox.jsx';
-import Search from './Search.jsx';
+import SearchBar from './SearchBar.jsx';
 
 import '../components/App.css';
 
@@ -27,7 +27,7 @@ function App() {
       </div>
       <div id="bottom-half">
         <div id="search-and-sort">
-          <Search workouts={history} />
+          <SearchBar workouts={history} />
           <SortBox workouts={history} />
         </div>
         <div id="history-table">
