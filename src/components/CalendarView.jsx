@@ -27,7 +27,7 @@ const CalendarView = function ({ setter }) {
 
   return (
     <div id="calendar-container">
-      <h3>Check Out Your Fitness History!</h3>
+      <h3>Checkout your fitness history!</h3>
       <Calendar onChange={handleChange} value={date} />
     </div>
   );
