@@ -7,7 +7,9 @@ function Login() {
   return (
     <div className="login-container">
       <NavBar />
-      <h1>Stay fit with FitTrack!</h1>
+      <div className="title">
+        <h1>Stay fit with FitTrack!</h1>
+      </div>
       <Box className="login-outer-box" sx={{ maxWidth: 400 }}>
         <Box className="login-box" sx={{ maxWidth: 400 }}>
           <form>

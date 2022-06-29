@@ -14,7 +14,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <Router>
     <React.StrictMode>
-      {/* <App /> */}
       <Switch>
         <Route exact path="/">
           <App />
