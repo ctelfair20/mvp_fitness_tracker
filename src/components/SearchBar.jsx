@@ -3,13 +3,14 @@ import { TextInput, Box, Button } from '@mantine/core';
 import { Search } from 'tabler-icons-react';
 import './SearchBar.css'
 
-function SearchBar({ workouts }) {
+function SearchBar({ workouts, setter }) {
 
   function handleSearchClick() {
     const filtered = workouts.filter((workout) => {
       return workout.exercise === 'sit-ups';
     });
     console.log(filtered);
+    setter(filtered);
   }
   if (workouts.length !== 0) {
     return (

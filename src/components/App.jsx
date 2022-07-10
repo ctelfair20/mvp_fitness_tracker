@@ -27,7 +27,7 @@ function App() {
       </div>
       <div id="bottom-half">
         <div id="search-and-sort">
-          <SearchBar workouts={history} />
+          <SearchBar workouts={history} setter={setHistory} />
           <SortBox workouts={history} />
         </div>
         <div id="history-table">
