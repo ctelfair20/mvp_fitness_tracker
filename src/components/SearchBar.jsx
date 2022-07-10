@@ -4,6 +4,13 @@ import { Search } from 'tabler-icons-react';
 import './SearchBar.css'
 
 function SearchBar({ workouts }) {
+
+  function handleSearchClick() {
+    const filtered = workouts.filter((workout) => {
+      return workout.exercise === 'sit-ups';
+    });
+    console.log(filtered);
+  }
   if (workouts.length !== 0) {
     return (
       <Box className="search-box-container">
@@ -12,6 +19,7 @@ function SearchBar({ workouts }) {
           placeholder="sit-ups"
         />
         <Button
+          onClick={handleSearchClick}
           className="search-button"
           size="18px"
         >
