@@ -13,10 +13,10 @@ function SearchBar({ workouts }) {
         />
         <Button
           className="search-button"
-          size="mt"
+          size="18px"
         >
           <Search
-            size={20}
+            size={18}
             strokeWidth={3}
           />
         </Button>

@@ -1,12 +1,13 @@
 import React from 'react';
+import { Text } from '@mantine/core';
 
 function SortBox({ workouts }) {
   if (workouts.length !== 0) {
     return (
       <div className="sort-box-container">
-        <span>Sort By:</span>
-        <button>Set</button>
-        <button>Rep</button>
+        <Text>Sort By:</Text>
+        <button>SET</button>
+        <button>REP</button>
       </div>
     )
   }
