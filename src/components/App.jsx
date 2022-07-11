@@ -6,11 +6,14 @@ import History from './History.jsx';
 import CalendarView from './CalendarView.jsx';
 import SortBox from './SortBox.jsx';
 import SearchBar from './SearchBar.jsx';
+import EmptySearch from './EmptySearch.js';
 
 import '../components/App.css';
 
 function App() {
   const [history, setHistory] = useState([]);
+  const [search, setSearch] = useState([1]);
+  const [searchClick, setSearchClick] = useState(false)
 
   return (
     <div id="app-container">
@@ -27,7 +30,18 @@ function App() {
       </div>
       <div id="bottom-half">
         <div id="search-and-sort">
-          <SearchBar workouts={history} setter={setHistory} />
+          <SearchBar
+            workouts={history}
+            setter={setHistory}
+            hasBeenClicked={setSearchClick}
+            searchClick={searchClick}
+            searchSetter={setSearch}
+            searchedWorkouts={search}
+          />
+          <EmptySearch
+            searchedWorkouts={search}
+            searchClick={searchClick}
+          />
           <SortBox workouts={history} />
         </div>
         <div id="history-table">

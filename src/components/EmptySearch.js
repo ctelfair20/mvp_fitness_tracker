@@ -1,7 +1,9 @@
 import { Box } from '@mantine/core';
 
-const EmptySearch = ({ searchedWorkouts }) => {
-  if (searchedWorkouts.length === 0) {
+const EmptySearch = ({ searchedWorkouts, searchClick }) => {
+  console.log(searchClick, searchedWorkouts.length);
+  if ((searchedWorkouts.length === 0) && searchClick) {
+    console.log('len', searchedWorkouts.length, 'clicked?', searchClick);
     return (
       <Box
         sx={(theme) => ({
