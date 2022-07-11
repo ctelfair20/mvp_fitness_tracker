@@ -5,9 +5,12 @@ function SortBox({ workouts }) {
 
   const [value, setValue] = useState('');
 
-  function handleChange() {
-    setValue();
-    console.log(value);
+  const handleChange = (e) => {
+    setValue(e);
+    function compare(a, b) {
+      return a[e] - b[e]
+    }
+    workouts.sort(compare)
   }
 
   if (workouts.length !== 0) {
@@ -15,13 +18,13 @@ function SortBox({ workouts }) {
       <Select
         className="sort-box-container"
         value={value}
-        onChange={handleChange}
+        onChange={(e) => handleChange(e)}
         clearable
         label="Sort by"
         placeholder="Pick one"
         data={[
-          { value: 'rep', label: 'Repititions' },
-          { value: 'set', label: 'Sets' },
+          { value: 'repititions', label: 'Repititions' },
+          { value: 'sets', label: 'Set' },
           { value: 'none', label: 'None' },
         ]}
       />
