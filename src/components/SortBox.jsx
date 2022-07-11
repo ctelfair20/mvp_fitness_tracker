@@ -1,7 +1,7 @@
 import React, { useState, } from 'react';
 import { Select } from '@mantine/core';
 
-function SortBox({ workouts }) {
+function SortBox({ workouts, setter }) {
 
   const [value, setValue] = useState('');
 
@@ -10,7 +10,7 @@ function SortBox({ workouts }) {
     function compare(a, b) {
       return a[e] - b[e]
     }
-    workouts.sort(compare)
+    setter(workouts.sort(compare));
   }
 
   if (workouts.length !== 0) {

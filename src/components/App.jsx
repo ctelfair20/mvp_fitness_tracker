@@ -42,7 +42,10 @@ function App() {
             searchedWorkouts={search}
             searchClick={searchClick}
           />
-          <SortBox workouts={history} />
+          <SortBox
+            workouts={history}
+            setter={setHistory}
+          />
         </div>
         <div id="history-table">
           <History workouts={history} />
