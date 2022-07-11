@@ -38,7 +38,7 @@ function History({ workouts }) {
             <th>Repitition #</th>
             {/* notes need to be added to the databse schema */}
             <th>Notes</th>
-            {/* <th>Made a mistake?</th> */}
+            <th id='delete-heading'>Made a mistake?</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
