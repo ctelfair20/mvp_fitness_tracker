@@ -1,15 +1,21 @@
 import React from 'react';
-import { Text } from '@mantine/core';
+import { Text, Select } from '@mantine/core';
 
 function SortBox({ workouts }) {
   if (workouts.length !== 0) {
     return (
-      <div className="sort-box-container">
-        <Text>Sort By:</Text>
-        <button>SET</button>
-        <button>REP</button>
-      </div>
-    )
+      <Select
+        className="sort-box-container"
+        clearable
+        label="Sort by"
+        placeholder="Pick one"
+        data={[
+          { value: 'rep', label: 'Repititions' },
+          { value: 'set', label: 'Sets' },
+          { value: 'none', label: 'None' },
+        ]}
+      />
+    );
   }
 }
 
