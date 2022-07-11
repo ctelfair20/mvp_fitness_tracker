@@ -30,7 +30,7 @@ function History({ workouts }) {
 
   if (workouts.length !== 0) {
     return (
-      <Table className="history-table" striped highlightOnHover>
+      <Table className="history-table" horizontalSpacing="sm" striped highlightOnHover>
         <thead>
           <tr>
             <th>Exercise</th>
@@ -38,7 +38,7 @@ function History({ workouts }) {
             <th>Repitition #</th>
             {/* notes need to be added to the databse schema */}
             <th>Notes</th>
-            <th>Made a mistake?</th>
+            {/* <th>Made a mistake?</th> */}
           </tr>
         </thead>
         <tbody>{rows}</tbody>
