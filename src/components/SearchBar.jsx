@@ -10,7 +10,7 @@ function SearchBar({ workouts, setter, hasBeenClicked, searchSetter }) {
 
   function handleSearchClick() {
     const filtered = workouts.filter((workout) => {
-      return workout.exercise.includes(value);
+      return workout.exercise.toUpperCase().includes(value.toUpperCase());
     });
 
     hasBeenClicked(true);
