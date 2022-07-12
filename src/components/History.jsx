@@ -1,11 +1,11 @@
-import { React, useState, useEffect } from 'react';
+import React from 'react';
 import { Table, Box, Button, Group, Textarea } from '@mantine/core';
-import axios from 'axios';
+// import axios from 'axios';
 
 function History({ workouts }) {
-  // this function needs to be fleshed out
+  // handleDeleteClick needs to be fleshed out
 
-  const handleEditClick = function () {
+  const handleDeleteClick = function () {
     console.log('delete was clicked!')
   }
 
@@ -14,9 +14,10 @@ function History({ workouts }) {
       <td>{history.exercise}</td>
       <td>{history.sets}</td>
       <td>{history.repititions}</td>
-      {/* the value of this textarea needs to be stored in the database when enter is pressed or
-      when the user clickes away from it (when the focus changes?)  */}
-      <td>
+
+      {/* I'm will work on the Notes and Delete button in the next iteration. The value of this textarea needs to be stored in the database when enter is pressed or
+      when the user clickes away from it (when the focus changes?) */}
+      {/* <td>
         <Textarea
           placeholder="How do you feel?"
           autosize
@@ -25,9 +26,9 @@ function History({ workouts }) {
       </td>
       <td>
         <Group position="left" mt="sx">
-          <Button onClick={handleEditClick}>Delete!</Button>
+          <Button onClick={handleDeleteClick}>Delete!</Button>
         </Group>
-      </td>
+      </td> */}
     </tr>
   ));
 
@@ -40,8 +41,8 @@ function History({ workouts }) {
             <th>Set #</th>
             <th>Repitition #</th>
             {/* notes need to be added to the databse schema */}
-            <th>Notes</th>
-            <th id='delete-heading'>Made a mistake?</th>
+            {/* <th>Notes</th> */}
+            {/* <th id='delete-heading'>Made a mistake?</th> */}
           </tr>
         </thead>
         <tbody>{rows}</tbody>

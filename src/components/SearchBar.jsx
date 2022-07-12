@@ -25,15 +25,16 @@ function SearchBar({ workouts, setter, hasBeenClicked, searchSetter }) {
     return (
       <Box className="search-box-container">
         <TextInput
+          id="search-box"
           value={value}
           onChange={(event) => setValue(event.currentTarget.value)}
           label="Search by Exercise"
+          description="To clear, click on date"
           placeholder="sit-ups"
         />
         <Button
           onClick={handleSearchClick}
           className="search-button"
-          size="18px"
         >
           <Search
             size={18}
