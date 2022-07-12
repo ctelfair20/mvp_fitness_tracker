@@ -5,12 +5,14 @@ function SortBox({ workouts, setter }) {
 
   const [value, setValue] = useState('');
 
+
   const handleChange = (e) => {
     setValue(e);
     function compare(a, b) {
       return a[e] - b[e]
     }
-    setter(workouts.sort(compare));
+    const sorted = [...workouts].sort(compare)
+    setter(sorted)
   }
 
   if (workouts.length !== 0) {

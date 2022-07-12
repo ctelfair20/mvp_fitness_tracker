@@ -4,7 +4,7 @@ import { Search } from 'tabler-icons-react';
 
 import './SearchBar.css'
 
-function SearchBar({ workouts, setter, hasBeenClicked, searchClick, searchSetter, searchedWorkouts }) {
+function SearchBar({ workouts, setter, hasBeenClicked, searchSetter }) {
 
   const [value, setValue] = useState('');
 
@@ -12,16 +12,13 @@ function SearchBar({ workouts, setter, hasBeenClicked, searchClick, searchSetter
     const filtered = workouts.filter((workout) => {
       return workout.exercise.includes(value);
     });
-    console.log('filtered', filtered);
+
     hasBeenClicked(true);
-    console.log('list', searchedWorkouts);
     if (filtered.length !== 0) {
       setter(filtered);
       searchSetter(filtered);
-      console.log('list2', searchedWorkouts);
     }
     searchSetter(filtered);
-    console.log('list3', searchedWorkouts);
   }
 
   if (workouts.length !== 0) {

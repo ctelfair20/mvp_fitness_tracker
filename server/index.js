@@ -28,6 +28,10 @@ app.post("/workout", (req, res) => {
   res.send('saved')
 });
 
+app.delete('/workout', (req, res) => {
+  console.log("trying to delete")
+})
+
 app.listen(port, () => {
   console.log(`listening in port ${port}`)
 })

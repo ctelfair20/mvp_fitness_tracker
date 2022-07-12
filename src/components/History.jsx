@@ -1,9 +1,12 @@
+import { React, useState, useEffect } from 'react';
 import { Table, Box, Button, Group, Textarea } from '@mantine/core';
+import axios from 'axios';
 
 function History({ workouts }) {
   // this function needs to be fleshed out
+
   const handleEditClick = function () {
-    console.log('edit was clicked!')
+    console.log('delete was clicked!')
   }
 
   const rows = workouts.map((history) => (

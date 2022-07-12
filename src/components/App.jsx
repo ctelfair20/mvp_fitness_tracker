@@ -34,9 +34,7 @@ function App() {
             workouts={history}
             setter={setHistory}
             hasBeenClicked={setSearchClick}
-            searchClick={searchClick}
             searchSetter={setSearch}
-            searchedWorkouts={search}
           />
           <EmptySearch
             searchedWorkouts={search}
