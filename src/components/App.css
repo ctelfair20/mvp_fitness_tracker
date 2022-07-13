@@ -49,9 +49,6 @@
 }
 
 /* Styles for History Component */
-#history-table {
-  display: flex;
-}
 
 .history-table {
   border-radius: 5px;
