@@ -3,6 +3,9 @@ import axios from 'axios';
 import { TextInput, NumberInput, Button, Group, Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
+// The form should clear after submit
+// It should auto fill the date field with today's date
+
 function Exercise() {
   const form = useForm({
     initialValues: {

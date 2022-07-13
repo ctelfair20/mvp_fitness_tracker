@@ -3,9 +3,11 @@ import NavBar from './NavBar.jsx';
 import { TextInput, Button, Group, Box } from '@mantine/core';
 import './Login.css';
 
+// Think about implementing actual authenication
+
 function Login() {
   return (
-    <div className="login-container">
+    <div className="login-page">
       <NavBar />
       <div className="title">
         <h1>Stay fit with FitTrack!</h1>

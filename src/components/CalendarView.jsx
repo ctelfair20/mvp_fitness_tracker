@@ -4,6 +4,8 @@ import Calendar from 'react-calendar';
 import axios from 'axios';
 import './CalendarView.css';
 
+
+//Think about using mantine to display a calendar rather than react-calender
 const CalendarView = function ({ setter }) {
   const [date, setDate] = useState(new Date());
 

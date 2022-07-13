@@ -29,7 +29,7 @@ function SearchBar({ workouts, setter, hasBeenClicked, searchSetter }) {
           value={value}
           onChange={(event) => setValue(event.currentTarget.value)}
           label="Search by Exercise"
-          description="To clear, click on date"
+          description="To clear search, click on date"
           placeholder="sit-ups"
         />
         <Button
