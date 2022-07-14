@@ -2,6 +2,8 @@ const express = require('express');
 const Workout = require('../database/index');
 const cors = require('cors');
 
+const historyPost = require('./routes/history');
+
 const app = express();
 const port = 4000;
 
