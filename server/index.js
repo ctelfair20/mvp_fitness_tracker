@@ -2,7 +2,7 @@ const express = require('express');
 const Workout = require('../database/index');
 const cors = require('cors');
 
-const historyPost = require('./routes/history');
+const historyRoutes = require('./routes/history');
 
 const app = express();
 const port = 4000;
@@ -11,6 +11,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static("build"));
 app.use(express.static("public"));
+
+app.use('/history', historyRoutes);
 
 app.get('/workout', (req, res) => {
   console.log('req', req.query)
