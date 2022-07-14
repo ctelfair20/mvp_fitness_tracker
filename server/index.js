@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.static("build"));
 app.use(express.static("public"));
 
+//test route
 app.use('/history', historyRoutes);
 
 app.get('/workout', (req, res) => {
