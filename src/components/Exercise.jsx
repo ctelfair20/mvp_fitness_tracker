@@ -25,7 +25,7 @@ function Exercise() {
     const getFormInfo = async () => {
       try {
         const postResponse = await axios({
-          url: 'http://localhost:4000/workout',
+          url: 'http://localhost:4000/',
           method: 'post',
           data: {
             date: form.values.date,
