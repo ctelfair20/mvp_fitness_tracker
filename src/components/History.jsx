@@ -6,10 +6,21 @@ function History({ workouts }) {
   // handleDeleteClick needs to be fleshed out
 
   const handleDeleteClick = function (id) {
-    console.log('delete was clicked!', workouts, id)
-    // const removeData = async () => {
-    //   const deleteResponse = axios
-    // }
+    console.log('delete was clicked!', id)
+    const removeData = async () => {
+      try {
+        const deleteResponse = await axios({
+          url: 'http://localhost:4000/',
+          method: 'delete',
+          data: {
+            id: id
+          }
+        })
+      } catch (err) {
+        throw err;
+      }
+    }
+    removeData();
   }
 
   const rows = workouts.map((history) => (
