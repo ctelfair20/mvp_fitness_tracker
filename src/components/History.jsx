@@ -3,7 +3,6 @@ import { Table, Box, Button, Group, Textarea } from '@mantine/core';
 // import axios from 'axios';
 
 function History({ workouts }) {
-  console.log("huh???", workouts)
   // handleDeleteClick needs to be fleshed out
 
   const handleDeleteClick = function () {
