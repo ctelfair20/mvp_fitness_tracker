@@ -1,5 +1,7 @@
 import React from 'react';
 import { Table, Box, Button, Group, Textarea } from '@mantine/core';
+
+import Notes from './Notes.jsx';
 import axios from 'axios';
 
 function History({ workouts }) {
@@ -29,13 +31,7 @@ function History({ workouts }) {
 
       {/* The value of this textarea needs to be stored in the database when enter is pressed or
       when the user clickes away from it (when the focus changes?) */}
-      {/* <td>
-        <Textarea
-          placeholder="How do you feel?"
-          autosize
-          minRows={1}
-        />
-      </td> */}
+      <Notes />
       <td>
         <Group position="left" mt="sx">
           <Button onClick={() => handleDeleteClick(history._id)}>Delete!</Button>
