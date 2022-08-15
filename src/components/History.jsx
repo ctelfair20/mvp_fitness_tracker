@@ -3,10 +3,8 @@ import { Table, Box, Button, Group, Textarea } from '@mantine/core';
 import axios from 'axios';
 
 function History({ workouts }) {
-  // handleDeleteClick needs to be fleshed out
 
   const handleDeleteClick = function (id) {
-    console.log('delete was clicked!', id)
     const removeData = async () => {
       try {
         const deleteResponse = await axios({
@@ -29,7 +27,7 @@ function History({ workouts }) {
       <td>{history.sets}</td>
       <td>{history.repititions}</td>
 
-      {/* I'm will work on the Notes and Delete button in the next iteration. The value of this textarea needs to be stored in the database when enter is pressed or
+      {/* The value of this textarea needs to be stored in the database when enter is pressed or
       when the user clickes away from it (when the focus changes?) */}
       {/* <td>
         <Textarea

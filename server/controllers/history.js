@@ -19,9 +19,9 @@ module.exports = {
   deleteHistory: (req, res) => {
     Workout.findOneAndDelete({ _id: req.body.id }, function (err, docs) {
       if (err) {
-        console.log('ERR ', err)
+        throw err;
       } else {
-        console.log("Deleted History : ", docs);
+        res.send('deleted!');
       }
     });
   }
