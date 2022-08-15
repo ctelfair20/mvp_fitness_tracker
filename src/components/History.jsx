@@ -1,12 +1,15 @@
 import React from 'react';
 import { Table, Box, Button, Group, Textarea } from '@mantine/core';
-// import axios from 'axios';
+import axios from 'axios';
 
 function History({ workouts }) {
   // handleDeleteClick needs to be fleshed out
 
-  const handleDeleteClick = function () {
-    console.log('delete was clicked!')
+  const handleDeleteClick = function (id) {
+    console.log('delete was clicked!', workouts, id)
+    // const removeData = async () => {
+    //   const deleteResponse = axios
+    // }
   }
 
   const rows = workouts.map((history) => (
@@ -26,7 +29,7 @@ function History({ workouts }) {
       </td> */}
       <td>
         <Group position="left" mt="sx">
-          <Button onClick={handleDeleteClick}>Delete!</Button>
+          <Button onClick={() => handleDeleteClick(history._id)}>Delete!</Button>
         </Group>
       </td>
     </tr>
