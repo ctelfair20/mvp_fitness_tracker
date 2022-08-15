@@ -11,20 +11,17 @@ const CalendarView = function ({ setter }) {
 
   const handleChange = (e) => {
     setDate(e)
-    axios({
-      url: 'http://localhost:4000/workout',
-      method: 'get',
-      params: {
-        date: e
-      }
-    })
-      .then((data) => {
-        setter(data.data)
-        console.log('received data')
+    const getData = async () => {
+      const data = await axios({
+        url: 'http://localhost:4000/',
+        method: 'get',
+        params: {
+          date: e
+        }
       })
-      .catch((err) => {
-        throw err;
-      })
+      setter(data.data);
+    }
+    getData();
   }
 
   return (
