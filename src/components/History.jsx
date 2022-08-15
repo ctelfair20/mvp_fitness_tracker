@@ -24,12 +24,12 @@ function History({ workouts }) {
           autosize
           minRows={1}
         />
-      </td>
+      </td> */}
       <td>
         <Group position="left" mt="sx">
           <Button onClick={handleDeleteClick}>Delete!</Button>
         </Group>
-      </td> */}
+      </td>
     </tr>
   ));
 
