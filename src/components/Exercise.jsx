@@ -22,24 +22,24 @@ function Exercise() {
   });
 
   function handleSubmit(values) {
-    console.log(values);
-    axios({
-      url: 'http://localhost:4000/workout',
-      method: 'post',
-      data: {
-        date: form.values.date,
-        exercise: form.values.exercise,
-        sets: form.values.sets,
-        repititions: form.values.repititions
-      },
-      header: { 'content-type': 'application/json' }
-    })
-      .then((data) => {
-        console.log('doc saved!')
-      })
-      .catch((err) => {
-        console.log('ERROR!!!', err)
-      })
+    const getFormInfo = async () => {
+      try {
+        const postResponse = await axios({
+          url: 'http://localhost:4000/workout',
+          method: 'post',
+          data: {
+            date: form.values.date,
+            exercise: form.values.exercise,
+            sets: form.values.sets,
+            repititions: form.values.repititions
+          },
+          header: { 'content-type': 'application/json' }
+        })
+      } catch (err) {
+        throw err;
+      }
+    }
+    getFormInfo();
   }
 
   return (

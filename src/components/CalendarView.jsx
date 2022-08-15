@@ -12,14 +12,18 @@ const CalendarView = function ({ setter }) {
   const handleChange = (e) => {
     setDate(e)
     const getData = async () => {
-      const data = await axios({
-        url: 'http://localhost:4000/',
-        method: 'get',
-        params: {
-          date: e
-        }
-      })
-      setter(data.data);
+      try {
+        const data = await axios({
+          url: 'http://localhost:4000/',
+          method: 'get',
+          params: {
+            date: e
+          }
+        })
+        setter(data.data);
+      } catch (err) {
+        throw err;
+      }
     }
     getData();
   }
