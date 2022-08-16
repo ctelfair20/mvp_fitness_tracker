@@ -23,5 +23,13 @@ module.exports = {
     } catch (err) {
       res.send(err);
     }
+    //   try {
+    //     const note = await Workout.find({ _id: "62fc1294032c72b301b1a713" });
+    //     console.log('first note', note[0].notes);
+    //     res.send(note);
+    //   } catch (err) {
+    //     res.send(err);
+    //   }
+    // }
   }
 };

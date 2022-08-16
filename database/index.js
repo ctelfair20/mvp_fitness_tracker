@@ -13,7 +13,8 @@ const workoutSchema = new mongoose.Schema({
   exercise: String,
   sets: Number,
   repititions: Number,
-  date: Date
+  date: Date,
+  notes: String
 });
 
 const Workout = mongoose.model('Workout', workoutSchema);
