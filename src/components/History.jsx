@@ -31,7 +31,7 @@ function History({ workouts }) {
 
       {/* The value of this textarea needs to be stored in the database when enter is pressed or
       when the user clickes away from it (when the focus changes?) */}
-      <Notes />
+      <Notes id={history._id} />
       <td>
         <Group position="left" mt="sx">
           <Button onClick={() => handleDeleteClick(history._id)}>Delete!</Button>
