@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import { Textarea } from '@mantine/core';
 
 const Notes = ({ id }) => {
-  const [text, setText] = useState('')
+
+  const [text, setText] = useState('');
+
   return (
     <td>
       <Textarea

@@ -1,28 +1,27 @@
 const Workout = require('../../database/index');
 
 module.exports = {
-  getHistory: (req, res) => {
-    Workout.find(req.query)
-      .then((data) => {
-        res.json(data);
-      }).catch(err => {
-        res.send(err);
-      })
+  getHistory: async (req, res) => {
+    try {
+      const data = await Workout.find(req.query);
+      res.json(data);
+    } catch (err) {
+      res.send(err);
+    }
   },
 
   createHistory: (req, res) => {
     const workoutDoc = new Workout(req.body);
     workoutDoc.save();
-    res.send('saved')
+    res.send('saved');
   },
 
-  deleteHistory: (req, res) => {
-    Workout.findOneAndDelete({ _id: req.body.id }, function (err, docs) {
-      if (err) {
-        throw err;
-      } else {
-        res.send('deleted!');
-      }
-    });
+  deleteHistory: async (req, res) => {
+    try {
+      await Workout.findOneAndDelete({ _id: req.body.id });
+      res.send('deleted');
+    } catch (err) {
+      res.send(err);
+    }
   }
 };
