@@ -37,17 +37,13 @@ const Notes = ({ record }) => {
     }
   }
 
-  const handleOnChange = (e) => {
-    setNewText(e.currentTarget.value);
-  }
-
   return (
     <td>
       <Textarea
         onBlur={(e) => { handleOnBlur(record._id) }}
         className="notes-container"
         value={newText ? newText : ''}
-        onChange={handleOnChange}
+        onChange={(e) => { setNewText(e.currentTarget.value) }}
         aria-label="Notes Post exercise"
         placeholder="How do you feel?"
         autosize
