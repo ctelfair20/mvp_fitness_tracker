@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Box, Button, Group, Textarea } from '@mantine/core';
+import { Table, Box, Button, Group } from '@mantine/core';
 
 import Notes from './Notes.jsx';
 import axios from 'axios';
@@ -9,7 +9,7 @@ function History({ workouts }) {
   const handleDeleteClick = function (id) {
     const removeData = async () => {
       try {
-        const deleteResponse = await axios({
+        await axios({
           url: 'http://localhost:4000/',
           method: 'delete',
           data: {
