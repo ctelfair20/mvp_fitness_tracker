@@ -23,18 +23,18 @@ function History({ workouts }) {
     removeData();
   }
 
-  const rows = workouts.map((history) => (
-    <tr key={history._id}>
-      <td>{history.exercise}</td>
-      <td>{history.sets}</td>
-      <td>{history.repititions}</td>
+  const rows = workouts.map((record) => (
+    <tr key={record._id}>
+      <td>{record.exercise}</td>
+      <td>{record.sets}</td>
+      <td>{record.repititions}</td>
 
       {/* The value of this textarea needs to be stored in the database when enter is pressed or
       when the user clickes away from it (when the focus changes?) */}
-      <Notes id={history._id} />
+      <Notes record={record} />
       <td>
         <Group position="left" mt="sx">
-          <Button onClick={() => handleDeleteClick(history._id)}>Delete!</Button>
+          <Button onClick={() => handleDeleteClick(record._id)}>Delete!</Button>
         </Group>
       </td>
     </tr>
