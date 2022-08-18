@@ -8,26 +8,20 @@ const Notes = ({ record }) => {
   const [newText, setNewText] = useState('');
 
   useEffect(() => {
-    // onMount, i need the old text to store the text in db
-    // const getText = async () => {
-    //   try {
-    //     const dbText = await axios.get('http://localhost:4000/')
-    //   } catch (err) {
-    //     console.log(err);
-    //   }
-    // }
-
-    // display old text in textarea
-    // console log old text to be sure
-    // getText()
-    console.log('oldText', oldText);
-
+    // onMount, grabs the note for this record from the db and stores it in oldText
+    const getText = async () => {
+      try {
+        const dbText = await axios.get(`http://localhost:4000/${record._id}`);
+        setOldText(dbText.data);
+      } catch (err) {
+        console.log('ERR: ', err);
+      }
+    }
+    getText();
   }, [])
-
 
   const handleOnBlur = async (id) => {
     if (oldText !== newText) {
-      console.log('both text, o & n', oldText, newText);
       try {
         await axios({
           url: `http://localhost:4000/${id}`,
@@ -40,9 +34,6 @@ const Notes = ({ record }) => {
         console.log(err);
       }
       setOldText(newText);
-      console.log('both text, o & n2', oldText, newText);
-    } else {
-      console.log("both are the same", oldText, newText);
     }
   }
 
