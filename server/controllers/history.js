@@ -31,5 +31,14 @@ module.exports = {
     //     res.send(err);
     //   }
     // }
+  },
+
+  patchHistoryNotes: async (req, res) => {
+    try {
+      await Workout.updateOne({ _id: req.params.id }, { notes: req.body.notes });
+      res.send('updated');
+    } catch (err) {
+      res.send(err);
+    }
   }
 };
