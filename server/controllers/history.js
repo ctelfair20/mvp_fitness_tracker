@@ -1,7 +1,16 @@
 const Workout = require('../../database/index');
 
 module.exports = {
-  getHistory: async (req, res) => {
+  getAllHistory: async (req, res) => {
+    try {
+      const data = await Workout.find(req.query);
+      res.json(data);
+    } catch (err) {
+      res.send(err);
+    }
+  },
+
+  getOneRecord: async (req, res) => {
     try {
       const data = await Workout.find(req.query);
       res.json(data);

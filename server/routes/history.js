@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const {
-  getHistory,
+  getAllHistory,
+  getOneRecord,
   createHistory,
   deleteHistory,
   patchHistoryNotes
@@ -10,7 +11,8 @@ const {
 
 
 
-router.get('/', getHistory);
+router.get('/', getAllHistory);
+router.get('/:id', getOneRecord);
 router.post('/', createHistory);
 router.delete('/', deleteHistory);
 router.patch('/:id', patchHistoryNotes);

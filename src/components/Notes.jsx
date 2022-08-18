@@ -9,13 +9,13 @@ const Notes = ({ record }) => {
 
   useEffect(() => {
     // onMount, i need the old text to store the text in db
-    const getText = async () => {
-      try {
-        const dbText = await axios.get('http://localhost:4000/')
-      } catch (err) {
-        console.log(err);
-      }
-    }
+    // const getText = async () => {
+    //   try {
+    //     const dbText = await axios.get('http://localhost:4000/')
+    //   } catch (err) {
+    //     console.log(err);
+    //   }
+    // }
 
     // display old text in textarea
     // console log old text to be sure
