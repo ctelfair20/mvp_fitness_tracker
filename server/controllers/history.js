@@ -11,9 +11,10 @@ module.exports = {
   },
 
   getOneRecord: async (req, res) => {
+    console.log(req.params)
     try {
-      const data = await Workout.find(req.query);
-      res.json(data);
+      const record = await Workout.find({ _id: req.params.id });
+      res.json(record[0].notes);
     } catch (err) {
       res.send(err);
     }
