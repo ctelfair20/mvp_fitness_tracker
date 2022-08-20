@@ -4,6 +4,7 @@ import NavBar from './NavBar.jsx';
 import Exercise from './Exercise.jsx';
 import History from './History.jsx';
 import CalendarView from './CalendarView.jsx';
+import Hydrate from './Hydrate.jsx';
 import SortBox from './SortBox.jsx';
 import SearchBar from './SearchBar.jsx';
 import EmptySearch from './EmptySearch.js';
@@ -26,6 +27,7 @@ function App() {
         </div>
         <div id="right-column">
           <CalendarView setter={setHistory} />
+          <Hydrate />
         </div>
       </div>
       <div id="bottom-half">
