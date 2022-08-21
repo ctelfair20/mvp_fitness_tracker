@@ -5,7 +5,7 @@ import './Login.css';
 
 // Think about implementing actual authenication
 
-function Login() {
+const Login = () => {
   return (
     <div className="login-page">
       <NavBar />

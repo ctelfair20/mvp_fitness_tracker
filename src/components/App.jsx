@@ -11,7 +11,7 @@ import EmptySearch from './EmptySearch.jsx';
 
 import '../components/App.css';
 
-function App() {
+const App = () => {
   const [date, setDate] = useState(new Date());
   const [history, setHistory] = useState([]);
   const [search, setSearch] = useState([1]);

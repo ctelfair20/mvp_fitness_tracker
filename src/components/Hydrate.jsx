@@ -8,7 +8,7 @@ const marks = [
   { value: 75, label: '75%' },
 ];
 
-function Hydrate() {
+const Hydrate = () => {
   return (
     <div className="Hydrate-bar-container">
       <h4>Stay Hydrated!</h4>

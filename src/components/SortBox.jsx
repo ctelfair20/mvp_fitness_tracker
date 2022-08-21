@@ -1,10 +1,9 @@
 import React, { useState, } from 'react';
 import { Select } from '@mantine/core';
 
-function SortBox({ workouts, setter }) {
+const SortBox = ({ workouts, setter }) => {
 
   const [value, setValue] = useState('');
-
 
   const handleChange = (e) => {
     setValue(e);

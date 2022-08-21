@@ -4,7 +4,7 @@ import { Table, Box, Button, Group } from '@mantine/core';
 import Notes from './Notes.jsx';
 import axios from 'axios';
 
-function History({ workouts, date, setterHistory }) {
+const History = ({ workouts, date, setterHistory }) => {
 
   const handleDeleteClick = function (id) {
     const removeData = async () => {

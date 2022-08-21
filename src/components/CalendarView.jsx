@@ -1,13 +1,11 @@
-import { React, useState } from 'react';
+import { React } from 'react';
+import axios from 'axios';
 
 import Calendar from 'react-calendar';
-import axios from 'axios';
 import './CalendarView.css';
-
 
 //Think about using mantine to display a calendar rather than react-calender
 const CalendarView = function ({ setterHistory, date, dateSetter }) {
-  // const [date, setDate] = useState(new Date());
 
   const handleChange = (e) => {
     dateSetter(e)

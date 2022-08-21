@@ -4,7 +4,7 @@ import { Search } from 'tabler-icons-react';
 
 import './SearchBar.css'
 
-function SearchBar({ workouts, setter, hasBeenClicked, searchSetter }) {
+const SearchBar = ({ workouts, setter, hasBeenClicked, searchSetter }) => {
 
   const [value, setValue] = useState('');
 
