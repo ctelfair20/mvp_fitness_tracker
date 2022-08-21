@@ -6,7 +6,7 @@ import { useForm } from '@mantine/form';
 // The form should clear after submit
 // It should auto fill the date field with today's date
 
-function Exercise() {
+function Exercise({ setter }) {
   const form = useForm({
     initialValues: {
       date: '',
@@ -35,6 +35,14 @@ function Exercise() {
           },
           header: { 'content-type': 'application/json' }
         })
+        const getResponse = await axios({
+          url: 'http://localhost:4000/',
+          method: 'get',
+          params: {
+            date: form.values.date,
+          }
+        })
+        setter(getResponse.data)
       } catch (err) {
         throw err;
       }

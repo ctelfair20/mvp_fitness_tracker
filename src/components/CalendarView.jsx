@@ -21,6 +21,7 @@ const CalendarView = function ({ setter }) {
           }
         })
         setter(data.data);
+        console.log(data.data)
       } catch (err) {
         throw err;
       }

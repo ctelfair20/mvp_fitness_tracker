@@ -23,7 +23,7 @@ function App() {
       <div id="top-half">
         <div id="left-column">
           <h3>What did you workout today?</h3>
-          <Exercise />
+          <Exercise setter={setHistory} />
         </div>
         <div id="right-column">
           <CalendarView setter={setHistory} />
