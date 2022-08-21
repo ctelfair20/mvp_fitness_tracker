@@ -6,11 +6,11 @@ import './CalendarView.css';
 
 
 //Think about using mantine to display a calendar rather than react-calender
-const CalendarView = function ({ setter }) {
-  const [date, setDate] = useState(new Date());
+const CalendarView = function ({ setterHistory, date, dateSetter }) {
+  // const [date, setDate] = useState(new Date());
 
   const handleChange = (e) => {
-    setDate(e)
+    dateSetter(e)
     const getData = async () => {
       try {
         const data = await axios({
@@ -20,8 +20,7 @@ const CalendarView = function ({ setter }) {
             date: e
           }
         })
-        setter(data.data);
-        console.log(data.data)
+        setterHistory(data.data);
       } catch (err) {
         throw err;
       }

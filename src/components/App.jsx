@@ -12,6 +12,7 @@ import EmptySearch from './EmptySearch.jsx';
 import '../components/App.css';
 
 function App() {
+  const [date, setDate] = useState(new Date());
   const [history, setHistory] = useState([]);
   const [search, setSearch] = useState([1]);
   const [searchClick, setSearchClick] = useState(false)
@@ -26,7 +27,7 @@ function App() {
           <Exercise setter={setHistory} />
         </div>
         <div id="right-column">
-          <CalendarView setter={setHistory} />
+          <CalendarView setterHistory={setHistory} date={date} dateSetter={setDate} />
         </div>
       </div>
       <div id="bottom-half">
@@ -47,7 +48,7 @@ function App() {
           />
         </div>
         <div id="history-table">
-          <History workouts={history} />
+          <History workouts={history} date={date} setterHistory={setHistory} />
         </div>
         <Hydrate />
       </div>

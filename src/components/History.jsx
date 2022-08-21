@@ -4,7 +4,7 @@ import { Table, Box, Button, Group } from '@mantine/core';
 import Notes from './Notes.jsx';
 import axios from 'axios';
 
-function History({ workouts }) {
+function History({ workouts, date, setterHistory }) {
 
   const handleDeleteClick = function (id) {
     const removeData = async () => {
@@ -16,6 +16,15 @@ function History({ workouts }) {
             id: id
           }
         })
+        // need acces to date variable from calendar view
+        const data = await axios({
+          url: 'http://localhost:4000/',
+          method: 'get',
+          params: {
+            date: date
+          }
+        })
+        setterHistory(data.data)
       } catch (err) {
         throw err;
       }
@@ -48,9 +57,8 @@ function History({ workouts }) {
             <th>Exercise</th>
             <th>Set #</th>
             <th>Repitition #</th>
-            {/* notes need to be added to the databse schema */}
-            {/* <th>Notes</th> */}
-            {/* <th id='delete-heading'>Made a mistake?</th> */}
+            <th>Notes</th>
+            <th id='delete-heading'>Made a mistake?</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>
