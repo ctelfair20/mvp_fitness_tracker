@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+
 import { TextInput, NumberInput, Button, Group, Box } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
@@ -24,7 +25,7 @@ const Exercise = ({ setter }) => {
   const handleSubmit = (values) => {
     const getFormInfo = async () => {
       try {
-        const postResponse = await axios({
+        await axios({
           url: 'http://localhost:4000/',
           method: 'post',
           data: {

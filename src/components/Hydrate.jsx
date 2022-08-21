@@ -1,5 +1,4 @@
 import { Slider } from '@mantine/core';
-
 import './Hydrate.css';
 
 const marks = [
