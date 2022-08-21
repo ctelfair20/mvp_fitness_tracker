@@ -7,7 +7,7 @@ import CalendarView from './CalendarView.jsx';
 import Hydrate from './Hydrate.jsx';
 import SortBox from './SortBox.jsx';
 import SearchBar from './SearchBar.jsx';
-import EmptySearch from './EmptySearch.js';
+import EmptySearch from './EmptySearch.jsx';
 
 import '../components/App.css';
 
@@ -27,7 +27,6 @@ function App() {
         </div>
         <div id="right-column">
           <CalendarView setter={setHistory} />
-          <Hydrate />
         </div>
       </div>
       <div id="bottom-half">
@@ -50,6 +49,7 @@ function App() {
         <div id="history-table">
           <History workouts={history} />
         </div>
+        <Hydrate />
       </div>
     </div>
   );
