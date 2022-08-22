@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import axios from 'axios';
 
 import { TextInput, NumberInput, Button, Group, Box } from '@mantine/core';
@@ -7,10 +8,16 @@ import { useForm } from '@mantine/form';
 // The form should clear after submit
 // It should auto fill the date field with today's date
 
-const Exercise = ({ setter }) => {
+const Exercise = ({ setter, date }) => {
+  const dateFormatter = (date) => {
+    console.log(date);
+    const d = moment(date, 'DDMMMYY').format('MM/DD/YYYY');
+    console.log(d);
+  }
+
   const form = useForm({
     initialValues: {
-      date: '',
+      date: moment(date, 'DDMMMYY').format('MM/DD/YYYY'),
       exercise: '',
       sets: '',
       repititions: ''
@@ -23,6 +30,7 @@ const Exercise = ({ setter }) => {
   });
 
   const handleSubmit = (values) => {
+    dateFormatter(date)
     const getFormInfo = async () => {
       try {
         await axios({

@@ -24,7 +24,7 @@ const App = () => {
       <div id="top-half">
         <div id="left-column">
           <h3>What did you workout today?</h3>
-          <Exercise setter={setHistory} />
+          <Exercise setter={setHistory} date={date} />
         </div>
         <div id="right-column">
           <CalendarView setterHistory={setHistory} date={date} dateSetter={setDate} />
