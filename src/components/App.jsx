@@ -50,7 +50,7 @@ const App = () => {
         <div id="history-table">
           <History workouts={history} date={date} setterHistory={setHistory} />
         </div>
-        <Hydrate />
+        {/* <Hydrate /> */}
       </div>
     </div>
   );
