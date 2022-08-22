@@ -9,11 +9,6 @@ import { useForm } from '@mantine/form';
 // It should auto fill the date field with today's date
 
 const Exercise = ({ setter, date }) => {
-  const dateFormatter = (date) => {
-    console.log(date);
-    const d = moment(date, 'DDMMMYY').format('MM/DD/YYYY');
-    console.log(d);
-  }
 
   const form = useForm({
     initialValues: {
@@ -30,7 +25,7 @@ const Exercise = ({ setter, date }) => {
   });
 
   const handleSubmit = (values) => {
-    dateFormatter(date)
+    // dateFormatter(date)
     const getFormInfo = async () => {
       try {
         await axios({
@@ -65,7 +60,7 @@ const Exercise = ({ setter, date }) => {
         <TextInput
           required
           label="Date"
-          placeholder="05/16/2022"
+          // placeholder="05/16/2022"
           {...form.getInputProps('date')}
         />
         <TextInput

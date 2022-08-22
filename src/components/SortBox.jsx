@@ -26,7 +26,7 @@ const SortBox = ({ workouts, setter }) => {
         data={[
           { value: 'repititions', label: 'Repititions' },
           { value: 'sets', label: 'Set' },
-          { value: 'none', label: 'None' },
+          // { value: 'none', label: 'None' },
         ]}
       />
     );
